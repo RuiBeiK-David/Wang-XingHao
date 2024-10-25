@@ -1,0 +1,167 @@
+/* 基本设置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+header {
+    background-color: #34495e;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #1abc9c;
+}
+
+/* 首页样式 */
+.home-section {
+    background: linear-gradient(135deg, #1abc9c 40%, #16a085 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-section {
+    padding: 50px 20px;
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+.projects-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.project-card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    perspective: 1000px;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.4s, box-shadow 0.3s;
+    transform-style: preserve-3d;
+    transform-origin: center;
+}
+
+.project-card:hover {
+    transform: rotateY(15deg) scale(1.1);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    color: #34495e;
+    font-size: 1.5rem;
+}
+
+/* 项目链接按钮样式 */
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    color: #fff;
+    background-color: #1abc9c;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #16a085;
+}
+
+/* 联系方式部分样式 */
+.contact-section {
+    background: #34495e;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contact-section input, 
+.contact-section textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical; 
+}
+
+.contact-section button {
+    width: 100%;
+    max-width: 200px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-section button:hover {
+    background: #16a085;
+}
+
+/* 淡入动画 */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h2, p {
+    animation: fadeIn 1.5s ease-in;
+}
